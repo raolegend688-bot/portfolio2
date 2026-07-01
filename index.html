@@ -7,7 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <style>
-/* ─── TOKENS ──────────────────────────── */
+/* ----- TOKENS ----- */
 :root {
   --void:   #04040B;
   --depth:  #070714;
@@ -24,7 +24,7 @@
   --gold-g: 0 0 60px rgba(196,154,26,0.18);
 }
 
-/* ─── RESET ──────────────────────────── */
+/* ----- RESET ----- */
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{
@@ -36,7 +36,7 @@ body{
 }
 a{text-decoration:none;color:inherit}
 
-/* ─── NOISE ──────────────────────────── */
+/* ----- NOISE ----- */
 .noise{
   position:fixed;inset:0;z-index:900;pointer-events:none;
   opacity:.028;
@@ -44,7 +44,7 @@ a{text-decoration:none;color:inherit}
   background-size:256px 256px;
 }
 
-/* ─── CURSOR ─────────────────────────── */
+/* ----- CURSOR ----- */
 .c-dot{
   position:fixed;width:5px;height:5px;
   background:var(--gold);border-radius:50%;
@@ -61,7 +61,7 @@ a{text-decoration:none;color:inherit}
 body.hov .c-dot{width:8px;height:8px;background:var(--gold-l)}
 body.hov .c-ring{width:52px;height:52px;border-color:rgba(196,154,26,.25)}
 
-/* ─── LOADER ─────────────────────────── */
+/* ----- LOADER ----- */
 .loader{
   position:fixed;inset:0;background:var(--void);
   z-index:9990;display:flex;align-items:center;justify-content:center;
@@ -84,7 +84,7 @@ body.hov .c-ring{width:52px;height:52px;border-color:rgba(196,154,26,.25)}
 @keyframes luUp{to{opacity:1;transform:translateY(0)}}
 @keyframes luBar{to{transform:scaleX(1)}}
 
-/* ─── NAV ────────────────────────────── */
+/* ----- NAV ----- */
 nav{
   position:fixed;top:0;left:0;right:0;z-index:500;
   display:flex;align-items:center;justify-content:space-between;
@@ -120,7 +120,7 @@ nav.stk{
   nav{padding:1rem 1.4rem}
 }
 
-/* ─── HERO ───────────────────────────── */
+/* ----- HERO ----- */
 .hero{
   min-height:100vh;display:flex;flex-direction:column;
   justify-content:center;padding:9rem 2.5rem 4rem;
@@ -241,7 +241,7 @@ nav.stk{
 .scroll-ln{width:40px;height:1px;background:var(--gold);opacity:.5}
 .scroll-tx{font-size:.65rem;color:var(--muted);letter-spacing:.15em;text-transform:uppercase}
 
-/* ─── MARQUEE ────────────────────────── */
+/* ----- MARQUEE ----- */
 .mq-wrap{
   border-top:1px solid var(--border);border-bottom:1px solid var(--border);
   padding:.9rem 0;overflow:hidden;background:var(--depth);
@@ -259,7 +259,7 @@ nav.stk{
 .mq-item .mq-sep{color:var(--gold);opacity:.5;font-size:.6rem}
 @keyframes mq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 
-/* ─── SECTION COMMON ─────────────────── */
+/* ----- SECTION COMMON ----- */
 .sec{padding:8rem 2.5rem}
 .sec-in{max-width:1200px;margin:0 auto}
 .sec-alt{background:var(--depth)}
@@ -279,13 +279,13 @@ nav.stk{
   max-width:520px;margin-bottom:4rem;
 }
 
-/* ─── REVEAL ─────────────────────────── */
+/* ----- REVEAL ----- */
 .rv{opacity:0;transform:translateY(28px);transition:opacity .75s ease,transform .75s ease}
 .rv.on{opacity:1;transform:none}
 .rv.d1{transition-delay:.1s}.rv.d2{transition-delay:.2s}
 .rv.d3{transition-delay:.3s}.rv.d4{transition-delay:.4s}
 
-/* ─── SERVICES ───────────────────────── */
+/* ----- SERVICES ----- */
 .svc-g{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:1.25rem}
 .svc-c{
   background:var(--card);border:1px solid var(--border);
@@ -325,7 +325,7 @@ nav.stk{
   padding:.2rem .6rem;font-size:.68rem;color:var(--muted);font-weight:500;
 }
 
-/* ─── PORTFOLIO ──────────────────────── */
+/* ----- PORTFOLIO ----- */
 .port-list{display:flex;flex-direction:column;gap:6rem}
 .port-item{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center}
 .port-item:nth-child(even) .port-i{order:2}
@@ -529,7 +529,7 @@ nav.stk{
   border-top:1px solid rgba(196,154,26,.05);
 }
 
-/* ─── TESTIMONIALS ───────────────────── */
+/* ----- TESTIMONIALS ----- */
 .testi-g{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:1.25rem}
 .testi-c{
   background:var(--card);border:1px solid var(--border);
@@ -568,7 +568,7 @@ nav.stk{
 .testi-nm{font-family:'Syne',sans-serif;font-weight:700;font-size:.88rem}
 .testi-biz{font-size:.75rem;color:var(--muted)}
 
-/* ─── PROCESS ────────────────────────── */
+/* ----- PROCESS ----- */
 .proc-g{
   display:grid;grid-template-columns:repeat(4,1fr);
   gap:0;position:relative;
@@ -598,180 +598,247 @@ nav.stk{
 .proc-t{font-family:'Syne',sans-serif;font-weight:700;font-size:.92rem;margin-bottom:.5rem}
 .proc-d{font-size:.8rem;color:var(--muted2);line-height:1.65}
 
-/* ─── PRICING ────────────────────────── */
+/* ----- PRICING ----- */
 .price-g{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;align-items:start}
 @media(max-width:768px){.price-g{grid-template-columns:1fr}}
 .price-c{
-  display:flex;flex-direction:column;justify-content:space-between;
-  background:var(--card);border:1px solid rgba(255,255,255,.08);
-  border-radius:28px;padding:2.2rem;
+  background:var(--card);border:1px solid var(--border);
+  border-radius:3px;padding:2.5rem 2rem;
   transition:transform .3s,border-color .3s,box-shadow .3s;
   position:relative;overflow:hidden;
-  min-height:0;
 }
 .price-c.feat{
-  border-color:rgba(196,154,26,.2);
-  background:linear-gradient(145deg,rgba(196,154,26,.1) 0%,rgba(196,154,26,.04) 100%);
-  box-shadow:0 30px 80px rgba(196,154,26,.08);
+  border-color:var(--b-gold);
+  background:linear-gradient(135deg,rgba(196,154,26,.07) 0%,rgba(196,154,26,.02) 100%);
 }
 .price-c:hover{transform:translateY(-5px);border-color:var(--b-gold);box-shadow:var(--gold-g)}
 .price-badge{
   position:absolute;top:1.5rem;right:1.5rem;
   background:var(--gold);color:#04040B;
-  font-size:.64rem;font-weight:800;
-  padding:.3rem .7rem;border-radius:4px;
-  text-transform:uppercase;letter-spacing:.11em;
+  font-size:.62rem;font-weight:800;
+  padding:.22rem .6rem;border-radius:2px;
+  text-transform:uppercase;letter-spacing:.1em;
 }
 .price-tier{
-  font-size:.72rem;font-weight:700;text-transform:uppercase;
+  font-size:.68rem;font-weight:700;text-transform:uppercase;
   letter-spacing:.14em;color:var(--muted);margin-bottom:1.2rem;
 }
 .price-amt{
   font-family:'Space Mono',monospace;
   font-size:2.8rem;font-weight:700;letter-spacing:-.04em;
-  margin-bottom:.4rem;color:var(--text);
+  margin-bottom:.3rem;color:var(--text);
 }
 .price-amt sup{font-size:1.1rem;vertical-align:super}
-.price-note{font-size:.82rem;color:var(--muted);margin-bottom:1.8rem;line-height:1.7}
+.price-note{font-size:.78rem;color:var(--muted);margin-bottom:2rem}
 .price-div{height:1px;background:var(--border);margin-bottom:1.8rem}
-.price-feats{list-style:none;display:flex;flex-direction:column;gap:.8rem;margin-bottom:2rem;flex:1}
+.price-feats{list-style:none;display:flex;flex-direction:column;gap:.8rem;margin-bottom:2.2rem}
 .price-feats li{
-  font-size:.9rem;color:var(--muted2);
-  display:flex;align-items:flex-start;gap:.6rem;line-height:1.65;
+  font-size:.85rem;color:var(--muted2);
+  display:flex;align-items:flex-start;gap:.6rem;line-height:1.5;
 }
-.price-feats li::before{content:'✓';color:var(--gold);font-weight:700;flex-shrink:0;margin-top:2px}
-.price-feats li.no::before{content:'✗';color:rgba(255,255,255,.25)}
+.price-feats li::before{content:'✔';color:var(--gold);font-weight:700;flex-shrink:0;margin-top:1px}
+.price-feats li.no::before{content:'✕';color:rgba(255,255,255,.15)}
 .price-feats li.no{opacity:.35}
 .price-cta-p{
-  display:inline-flex;justify-content:center;align-items:center;
-  padding:1rem 1.1rem;border-radius:14px;
+  display:block;text-align:center;padding:.9rem;border-radius:2px;
   background:var(--gold);color:#04040B;
-  font-family:'Syne',sans-serif;font-weight:700;font-size:.94rem;
+  font-family:'Syne',sans-serif;font-weight:700;font-size:.88rem;
   letter-spacing:.02em;cursor:none;
-  transition:background .2s,transform .2s,box-shadow .2s;
-  width:100%;
+  transition:background .2s,transform .2s;
 }
-.price-cta-p:hover{background:var(--gold-l);transform:translateY(-1px);box-shadow:0 16px 40px rgba(196,154,26,.22)}
+.price-cta-p:hover{background:var(--gold-l);transform:translateY(-1px)}
 .price-cta-o{
-  display:inline-flex;justify-content:center;align-items:center;
-  padding:1rem 1.1rem;border-radius:14px;
+  display:block;text-align:center;padding:.9rem;border-radius:2px;
   border:1px solid var(--border);color:var(--text);
-  font-family:'Syne',sans-serif;font-weight:600;font-size:.94rem;
+  font-family:'Syne',sans-serif;font-weight:600;font-size:.88rem;
   letter-spacing:.02em;cursor:none;
-  transition:border-color .2s,background .2s,box-shadow .2s;
-  width:100%;
+  transition:border-color .2s,background .2s;
 }
-.price-cta-o:hover{border-color:var(--b-gold);background:var(--gold-d);box-shadow:0 16px 40px rgba(196,154,26,.12)}
+.price-cta-o:hover{border-color:var(--b-gold);background:var(--gold-d)}
 
-/* ─── CTA SECTION ────────────────────── */
+/* ----- CONTACT SECTION ----- */
 #contact{text-align:left}
-#contact .sec-in{max-width:1080px}
-.cta-wrap{max-width:720px;margin:0 auto}
-.cta-h{
-  font-family:'Syne',sans-serif;
-  font-size:clamp(2.6rem,6vw,5.5rem);font-weight:800;
-  letter-spacing:-.05em;line-height:.96;margin-bottom:1.8rem;
-}
-.cta-sub{
-  font-size:1rem;color:var(--muted2);line-height:1.8;
-  max-width:560px;margin:0 0 3.5rem 0;
-}
 .contact-grid{
   display:grid;
-  grid-template-columns:minmax(300px,360px) minmax(420px,1fr);
-  gap:2.8rem;
+  grid-template-columns:1fr minmax(320px,420px);
+  gap:2rem;
   align-items:start;
 }
 .contact-panel{
-  background:rgba(255,255,255,.04);
-  border:1px solid rgba(255,255,255,.1);
-  border-radius:28px;
-  padding:2.4rem;
-  box-shadow:0 24px 56px rgba(0,0,0,.16);
-  position:relative;
+  background:rgba(255,255,255,.03);
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:18px;
+  padding:2rem;
+  display:flex;
+  flex-direction:column;
+  gap:1.5rem;
 }
-.contact-panel::before{
-  content:'';
-  position:absolute;top:1.75rem;left:1.75rem;
-  width:42px;height:3px;
-  border-radius:999px;
-  background:linear-gradient(90deg,var(--gold),var(--gold-l));
-  opacity:.9;
+.contact-panel-head{
+  display:flex;
+  flex-direction:column;
+  gap:.65rem;
 }
-.contact-panel-head{display:flex;flex-direction:column;gap:.5rem;margin-bottom:1.8rem;}
 .contact-panel-title{
   font-family:'Syne',sans-serif;
-  font-size:1.25rem;font-weight:800;
-  line-height:1.1;color:var(--text);
+  font-size:clamp(1.55rem,2.2vw,1.9rem);
+  font-weight:800;
+  line-height:1.05;
 }
-.contact-summary{display:grid;grid-template-columns:1fr;gap:1.35rem;margin-bottom:1.5rem;}
-.contact-meta{display:flex;flex-direction:column;gap:.35rem;}
-.field-label{font-size:.68rem;letter-spacing:1.4px;text-transform:uppercase;color:var(--muted);margin-bottom:0;}
-.field-value{font-size:1rem;font-weight:700;color:var(--text);line-height:1.45;}
-.contact-links{display:flex;flex-direction:column;gap:.75rem;margin-top:1.8rem;}
-.cl{
-  display:inline-flex;align-items:center;gap:.75rem;
-  padding:.92rem 1rem;border-radius:16px;
-  background:rgba(255,255,255,.05);
-  border:1px solid rgba(255,255,255,.12);
-  color:var(--gold-l);font-weight:700;
-  transition:border-color .2s,transform .2s,background .2s,box-shadow .2s;
-  cursor:none;
+.contact-panel-copy{
+  color:var(--muted2);
+  line-height:1.8;
 }
-.cl:hover{
-  transform:translateY(-1px);
-  background:rgba(255,255,255,.1);
-  border-color:rgba(196,154,26,.45);
-  box-shadow:0 12px 24px rgba(196,154,26,.1);
+.contact-summary{
+  display:grid;
+  gap:1rem;
+}
+.contact-meta{
+  display:flex;
+  justify-content:space-between;
+  gap:1rem;
+  padding:1rem 1rem;
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:12px;
+  background:rgba(255,255,255,.02);
+}
+.contact-meta .field-label{color:var(--muted2);font-size:.78rem;text-transform:uppercase;letter-spacing:.16em;}
+.contact-meta .field-value{font-size:.95rem;font-weight:700;}
+.panel-list{
+  display:flex;
+  flex-direction:column;
+  gap:.8rem;
+}
+.panel-item{
+  display:flex;
+  gap:.9rem;
+  align-items:flex-start;
+  color:var(--muted2);
+  line-height:1.75;
+}
+.panel-item strong{
+  color:var(--gold);
+  font-family:'Syne',sans-serif;
+  min-width:1.6rem;
 }
 .contact-form{
-  display:flex;flex-direction:column;gap:1rem;
-  background:rgba(255,255,255,.02);
+  background:rgba(255,255,255,.03);
   border:1px solid rgba(255,255,255,.08);
-  border-radius:28px;
+  border-radius:18px;
   padding:2rem;
-  box-shadow:0 24px 60px rgba(0,0,0,.12);
+  display:flex;
+  flex-direction:column;
+  gap:1.25rem;
 }
-.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem;}
-.form-field{display:flex;flex-direction:column;gap:.45rem;}
+.form-row{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:1rem;
+}
+.form-field{display:flex;flex-direction:column;gap:.65rem;}
+.field-label{
+  font-size:.82rem;
+  color:var(--muted2);
+  letter-spacing:.12em;
+  text-transform:uppercase;
+}
 .field-control{
-  width:100%;padding:1rem 1.1rem;
-  background:rgba(255,255,255,.04);
+  width:100%;
+  min-height:3rem;
   border:1px solid rgba(255,255,255,.12);
-  border-radius:16px;
+  background:rgba(255,255,255,.03);
   color:var(--text);
-  font:inherit;
-  outline:none;
-  transition:border-color .2s,background .2s,box-shadow .2s;
+  border-radius:14px;
+  padding:1rem 1.1rem;
+  font-size:.95rem;
+  transition:border-color .25s,background .25s,box-shadow .25s;
 }
-.field-control:focus{border-color:var(--gold);background:rgba(255,255,255,.1);box-shadow:0 0 0 4px rgba(196,154,26,.08);}
-select.field-control{appearance:none;-webkit-appearance:none;-moz-appearance:none;position:relative;}
+select.field-control{
+  -webkit-appearance:none;
+  -moz-appearance:none;
+  appearance:none;
+  background:rgba(255,255,255,.05);
+}
 select.field-control option{
-  background:var(--void);
   color:var(--text);
+  background:#06060c;
 }
-.field-control::placeholder{color:rgba(255,255,255,.56);}
-.full-width{grid-column:1/-1;}
-.contact-submit{padding:1rem 1.75rem;border-radius:999px;border:none;background:linear-gradient(90deg,var(--gold),var(--gold-l));color:#04040B;font-weight:700;box-shadow:0 20px 48px rgba(196,154,26,.2);cursor:none;transition:transform .2s,box-shadow .2s;}
-.contact-submit:hover{transform:translateY(-1px);box-shadow:0 24px 52px rgba(196,154,26,.25);}
-.form-success{
-  display:none;margin-top:1rem;padding:1rem 1.2rem;
-  background:rgba(196,154,26,.08);
-  border:1px solid rgba(196,154,26,.16);
-  border-radius:16px;
-  font-size:.92rem;color:var(--gold-l);
+.field-control:focus{
+  outline:none;
+  border-color:rgba(196,154,26,.45);
+  background:rgba(255,255,255,.07);
+  box-shadow:0 0 0 3px rgba(196,154,26,.08);
 }
-@media(max-width:900px){
-  .contact-grid{grid-template-columns:1fr;}
-  .form-row{grid-template-columns:1fr;}
-  #contact{text-align:center;}
-  .contact-panel{padding:2rem;}
-  .contact-form{padding:1.8rem;}
-  .contact-links{align-items:center;}
-  .cl{width:100%;justify-content:center;}
+.field-control::placeholder{color:rgba(238,238,248,.5);}
+.form-field.full-width{grid-column:1/-1;}
+.form-helper{
+  margin-top:.45rem;
+  font-size:.85rem;
+  color:var(--muted);
+  line-height:1.6;
 }
+.contact-submit{
+  width:fit-content;
+  border:none;
+  border-radius:999px;
+  background:linear-gradient(135deg,var(--gold),var(--gold-l));
+  color:#04040B;
+  padding:.95rem 2rem;
+  font-family:'Syne',sans-serif;
+  font-weight:700;
+  font-size:.95rem;
+  letter-spacing:.02em;
+  cursor:none;
+  transition:transform .2s,box-shadow .2s,opacity .2s;
+}
+.contact-submit:hover{transform:translateY(-2px);box-shadow:0 18px 40px rgba(196,154,26,.25);opacity:.98;}
+.form-status{
+  display:none;
+  min-height:2.6rem;
+  padding:.95rem 1rem;
+  border-radius:12px;
+  font-size:.92rem;
+  font-weight:600;
+  line-height:1.4;
+  opacity:0;
+  transition:opacity .25s ease,transform .25s ease;
+}
+.form-status.visible{
+  display:flex;
+  align-items:center;
+  opacity:1;
+  transform:translateY(0);
+}
+.form-status.success{
+  color:#08070f;
+  background:rgba(221,184,42,.18);
+  border:1px solid rgba(221,184,42,.4);
+}
+.form-status.error{
+  color:#f7e7df;
+  background:rgba(255,86,86,.14);
+  border:1px solid rgba(255,86,86,.3);
+}
+.contact-submit:disabled{
+  opacity:.65;
+  cursor:not-allowed;
+  transform:none;
+}
+.contact-links{
+  display:flex;gap:1rem;flex-wrap:wrap;
+}
+.cl{
+  display:flex;align-items:center;gap:.6rem;
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:12px;
+  padding:.95rem 1.2rem;
+  font-family:'Syne',sans-serif;font-weight:700;font-size:.85rem;
+  transition:border-color .2s,transform .2s,background .2s;
+  cursor:none;
+}
+.cl:hover{border-color:var(--b-gold);transform:translateY(-2px);background:rgba(196,154,26,.08);}
 
-/* ─── FOOTER ─────────────────────────── */
+/* ----- FOOTER ----- */
 footer{
   padding:2rem 2.5rem;border-top:1px solid var(--border);
   display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;
@@ -783,7 +850,29 @@ footer{
 .f-links a{font-size:.73rem;color:var(--muted);transition:color .2s;cursor:none}
 .f-links a:hover{color:var(--gold)}
 
-/* ─── MOBILE ─────────────────────────── */
+/* FLOATING WHATSAPP */
+.wa-float{
+  position:fixed;bottom:2rem;right:2rem;
+  width:52px;height:52px;
+  background:#25D366;
+  border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  color:#fff;z-index:200;
+  box-shadow:0 8px 32px rgba(37,211,102,.35);
+  transition:transform .2s,box-shadow .2s;
+  animation:waFloat 3s ease-in-out infinite;
+}
+.wa-float:hover{transform:scale(1.1);box-shadow:0 12px 40px rgba(37,211,102,.5)}
+@keyframes waFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+
+@media(max-width:900px){
+  .contact-grid{grid-template-columns:1fr;}
+  .contact-panel,
+  .contact-form{padding:1.6rem;}
+  .form-row{grid-template-columns:1fr;}
+  .contact-panel{border-radius:16px;}
+  .contact-form{border-radius:16px;}
+}
 @media(max-width:600px){
   .hero{padding:8rem 1.4rem 3rem}
   .sec{padding:5.5rem 1.4rem}
@@ -791,6 +880,15 @@ footer{
   .c-dot,.c-ring{display:none}
   body{cursor:auto}
   .scroll-ind{display:none}
+  .contact-panel,
+  .contact-form{padding:1.4rem;}
+  .contact-panel-title{font-size:1.5rem;}
+  .contact-meta{flex-direction:column;align-items:flex-start;}
+  .contact-meta .field-label{font-size:.75rem;}
+  .contact-meta .field-value{font-size:.9rem;}
+  .contact-links{justify-content:flex-start;}
+  .cl{width:100%;justify-content:center;}
+  .wa-float{bottom:1.25rem;right:1.25rem;width:46px;height:46px;}
 }
 </style>
 </head>
@@ -839,7 +937,7 @@ footer{
       <span class="hl"><span class="gold-txt">AI-Powered</span></span>
       <span class="hl"><span>Websites.</span></span>
     </h1>
-    <p class="hero-sub">Conversion-focused websites and copy that closes deals — for small businesses that are serious about growth. Delivered in 72 hours.</p>
+    <p class="hero-sub">I build AI-powered websites and copy that converts — for small businesses serious about growth. From concept to live site in 72 hours. No agency fees, no retainers.</p>
     <div class="hero-acts">
       <a href="#contact" class="btn-g">Start a Project →</a>
       <a href="#work" class="btn-o">See My Work ↓</a>
@@ -868,22 +966,22 @@ footer{
 <!-- MARQUEE -->
 <div class="mq-wrap" aria-hidden="true">
   <div class="mq-track" id="mqt">
-    <span class="mq-item">AI Website Development<span class="mq-sep">◆</span></span>
-    <span class="mq-item">Conversion Copywriting<span class="mq-sep">◆</span></span>
-    <span class="mq-item">72hr Delivery<span class="mq-sep">◆</span></span>
-    <span class="mq-item">Razorpay Integration<span class="mq-sep">◆</span></span>
-    <span class="mq-item">Email Sequences<span class="mq-sep">◆</span></span>
-    <span class="mq-item">Landing Pages<span class="mq-sep">◆</span></span>
-    <span class="mq-item">Brand Identity<span class="mq-sep">◆</span></span>
-    <span class="mq-item">Local SEO<span class="mq-sep">◆</span></span>
-    <span class="mq-item">AI Website Development<span class="mq-sep">◆</span></span>
-    <span class="mq-item">Conversion Copywriting<span class="mq-sep">◆</span></span>
-    <span class="mq-item">72hr Delivery<span class="mq-sep">◆</span></span>
-    <span class="mq-item">Razorpay Integration<span class="mq-sep">◆</span></span>
-    <span class="mq-item">Email Sequences<span class="mq-sep">◆</span></span>
-    <span class="mq-item">Landing Pages<span class="mq-sep">◆</span></span>
-    <span class="mq-item">Brand Identity<span class="mq-sep">◆</span></span>
-    <span class="mq-item">Local SEO<span class="mq-sep">◆</span></span>
+    <span class="mq-item">AI Website Development<span class="mq-sep">•</span></span>
+    <span class="mq-item">Conversion Copywriting<span class="mq-sep">•</span></span>
+    <span class="mq-item">72hr Delivery<span class="mq-sep">•</span></span>
+    <span class="mq-item">Razorpay Integration<span class="mq-sep">•</span></span>
+    <span class="mq-item">Email Sequences<span class="mq-sep">•</span></span>
+    <span class="mq-item">Landing Pages<span class="mq-sep">•</span></span>
+    <span class="mq-item">Brand Identity<span class="mq-sep">•</span></span>
+    <span class="mq-item">Local SEO<span class="mq-sep">•</span></span>
+    <span class="mq-item">AI Website Development<span class="mq-sep">•</span></span>
+    <span class="mq-item">Conversion Copywriting<span class="mq-sep">•</span></span>
+    <span class="mq-item">72hr Delivery<span class="mq-sep">•</span></span>
+    <span class="mq-item">Razorpay Integration<span class="mq-sep">•</span></span>
+    <span class="mq-item">Email Sequences<span class="mq-sep">•</span></span>
+    <span class="mq-item">Landing Pages<span class="mq-sep">•</span></span>
+    <span class="mq-item">Brand Identity<span class="mq-sep">•</span></span>
+    <span class="mq-item">Local SEO<span class="mq-sep">•</span></span>
   </div>
 </div>
 
@@ -900,13 +998,13 @@ footer{
         <div class="svc-ico">🌐</div>
         <div class="svc-t">AI Website Build</div>
         <div class="svc-d">A fast, clean, conversion-ready website built with modern AI tools. Design, copy, hosting setup — all included. You own it completely.</div>
-        <div class="svc-p">From ₹7,000</div>
+        <div class="svc-p">From ₹12,000</div>
         <div class="tags"><span class="tg">Netlify Deploy</span><span class="tg">Mobile-First</span><span class="tg">SEO-Ready</span></div>
       </div>
       <div class="svc-c rv d2">
         <div class="shine"></div>
         <div class="svc-bg-n">02</div>
-        <div class="svc-ico">✍️</div>
+        <div class="svc-ico">✅</div>
         <div class="svc-t">Conversion Copywriting</div>
         <div class="svc-d">Landing pages, email sequences, product descriptions — written to move people from curious to buying. Every word earns its place.</div>
         <div class="svc-p">From ₹2,500</div>
@@ -915,7 +1013,7 @@ footer{
       <div class="svc-c rv d3">
         <div class="shine"></div>
         <div class="svc-bg-n">03</div>
-        <div class="svc-ico">📱</div>
+        <div class="svc-ico">📈</div>
         <div class="svc-t">Social Media Copy</div>
         <div class="svc-d">30 days of Instagram and LinkedIn captions that sound like you — only sharper, more consistent, and built to grow your audience.</div>
         <div class="svc-p">From ₹3,500/mo</div>
@@ -927,7 +1025,7 @@ footer{
         <div class="svc-ico">🚀</div>
         <div class="svc-t">Full Brand Package</div>
         <div class="svc-d">Website + copy + social content. The complete online presence for a business starting fresh or doing a full rebrand. Best ROI, period.</div>
-        <div class="svc-p">From ₹15,000</div>
+        <div class="svc-p">From ₹50,000</div>
         <div class="tags"><span class="tg">Website</span><span class="tg">Copy</span><span class="tg">Social Kit</span><span class="tg">Best Value</span></div>
       </div>
     </div>
@@ -949,7 +1047,7 @@ footer{
           <h3 class="port-t">Zenith Dental Care</h3>
           <div class="port-type">Website + Booking Integration</div>
           <p class="port-d">A dental clinic in Rewa was losing patients to clinics they could find on Google. Built a trustworthy website with Calendly booking and copy that converts a first-time visitor into a booked appointment.</p>
-          <div class="port-res">⚡ 3× more appointments in first 30 days</div>
+          <div class="port-res">✓ 3× more appointments in first 30 days</div>
           <div class="tags" style="margin-top:1.2rem"><span class="tg">Healthcare</span><span class="tg">Booking</span><span class="tg">Local SEO</span></div>
         </div>
         <div class="port-m">
@@ -973,7 +1071,7 @@ footer{
                 <div class="dm-svcs">
                   <div class="dm-sv"><div class="dm-sv-ico">🦷</div><div class="dm-sv-t"></div><div class="dm-sv-s"></div></div>
                   <div class="dm-sv"><div class="dm-sv-ico" style="background:#DCFCE7">✨</div><div class="dm-sv-t"></div><div class="dm-sv-s"></div></div>
-                  <div class="dm-sv"><div class="dm-sv-ico" style="background:#FEF3C7">🩺</div><div class="dm-sv-t"></div><div class="dm-sv-s"></div></div>
+                  <div class="dm-sv"><div class="dm-sv-ico" style="background:#FEF3C7">🧾</div><div class="dm-sv-t"></div><div class="dm-sv-s"></div></div>
                 </div>
                 <div class="dm-stat-bar">
                   <div class="dm-st"><div class="dm-st-n">5,000+</div><div class="dm-st-l"></div></div>
@@ -993,7 +1091,7 @@ footer{
           <h3 class="port-t">FlowFit by Riya</h3>
           <div class="port-type">Brand Site + Launch Email Sequence</div>
           <p class="port-d">An online fitness coach with a great program and zero digital infrastructure. Built an energetic brand site and a 5-email launch sequence. The emails alone generated ₹2.4L in course sales in week one.</p>
-          <div class="port-res">⚡ ₹2.4L in sales from launch week emails</div>
+          <div class="port-res">✓ ₹2.4L in sales from launch week emails</div>
           <div class="tags" style="margin-top:1.2rem"><span class="tg">Fitness</span><span class="tg">Email Copy</span><span class="tg">Course Launch</span></div>
         </div>
         <div class="port-m">
@@ -1039,7 +1137,7 @@ footer{
           <h3 class="port-t">Nakshatra Jewels</h3>
           <div class="port-type">E-Commerce Site + Product Copywriting</div>
           <p class="port-d">A family jewellery business, 20 years offline, taking their first step online. Built a luxury e-commerce site with Razorpay integration and rewrote every product description to position them in the premium market.</p>
-          <div class="port-res">⚡ Featured on 3 wedding blogs organically</div>
+          <div class="port-res">✓ Featured on 3 wedding blogs organically</div>
           <div class="tags" style="margin-top:1.2rem"><span class="tg">Luxury Retail</span><span class="tg">E-Commerce</span><span class="tg">Razorpay</span><span class="tg">Product Copy</span></div>
         </div>
         <div class="port-m">
@@ -1061,8 +1159,8 @@ footer{
                 </div>
                 <div class="jw-prods">
                   <div class="jw-prod"><div class="jw-prod-img">💍</div><div class="jw-prod-info"><div class="jw-pn"></div><div class="jw-pp"></div></div></div>
-                  <div class="jw-prod"><div class="jw-prod-img">📿</div><div class="jw-prod-info"><div class="jw-pn"></div><div class="jw-pp"></div></div></div>
-                  <div class="jw-prod"><div class="jw-prod-img">👑</div><div class="jw-prod-info"><div class="jw-pn"></div><div class="jw-pp"></div></div></div>
+                  <div class="jw-prod"><div class="jw-prod-img">🛍</div><div class="jw-prod-info"><div class="jw-pn"></div><div class="jw-pp"></div></div></div>
+                  <div class="jw-prod"><div class="jw-prod-img">📦</div><div class="jw-prod-info"><div class="jw-pn"></div><div class="jw-pp"></div></div></div>
                 </div>
                 <div class="jw-cta"><div class="jw-cta-btn">Shop Collection</div></div>
                 <div class="jw-quote">Every piece tells a story — yours.</div>
@@ -1079,7 +1177,7 @@ footer{
           <h3 class="port-t">Anona Agarwal</h3>
           <div class="port-type">Personal Brand Website · Content Creator</div>
           <p class="port-d">Built a premium editorial website for Anona Agarwal — podcaster, media personality and former journalist at Times of India, MX Player and Divya Bhaskar. Full brand site covering podcast, press features, speaking inquiries and a Formspree-integrated contact brief.</p>
-          <div class="port-res">⚡ Editorial design — live at anonaaDemo.netlify.app</div>
+          <div class="port-res">✓ Editorial design — live at anonaaDemo.netlify.app</div>
           <div class="tags" style="margin-top:1.2rem"><span class="tg">Personal Brand</span><span class="tg">Content Creator</span><span class="tg">Editorial Design</span><span class="tg">Formspree</span></div>
         </div>
         <div class="port-m">
@@ -1129,7 +1227,7 @@ footer{
           <h3 class="port-t">WebG E-Commerce</h3>
           <div class="port-type">Full-Stack E-Commerce Platform · SaaS Template</div>
           <p class="port-d">Built a complete full-stack e-commerce template as part of WebG — a website generation platform. React frontend, Node/Express backend, MongoDB Atlas database, Razorpay payment gateway. Dark premium UI. Deployed on Vercel + Render. Any business can go live in minutes.</p>
-          <div class="port-res">⚡ Live at webg-ecommerce-frontend.vercel.app</div>
+          <div class="port-res">✓ Live at webg-ecommerce-frontend.vercel.app</div>
           <div class="tags" style="margin-top:1.2rem"><span class="tg">React</span><span class="tg">Node.js</span><span class="tg">MongoDB</span><span class="tg">Razorpay</span><span class="tg">Full-Stack</span></div>
         </div>
         <div class="port-m">
@@ -1146,7 +1244,7 @@ footer{
                     <div style="font-size:6px;color:rgba(255,255,255,0.4);">Products</div>
                     <div style="font-size:6px;color:rgba(255,255,255,0.4);">Electronics</div>
                     <div style="font-size:6px;color:rgba(255,255,255,0.4);">Clothing</div>
-                    <div style="width:20px;height:14px;background:#d4af37;border-radius:1px;display:flex;align-items:center;justify-content:center;"><div style="font-size:6px;color:#000;font-weight:800;">🛒</div></div>
+                    <div style="width:20px;height:14px;background:#d4af37;border-radius:1px;display:flex;align-items:center;justify-content:center;"><div style="font-size:6px;color:#000;font-weight:800;">➡</div></div>
                   </div>
                 </div>
                 <div style="padding:16px 14px;text-align:center;border-bottom:1px solid rgba(255,255,255,0.04);">
@@ -1158,7 +1256,7 @@ footer{
                 <div style="background:#d4af37;padding:4px 0;overflow:hidden;"><div style="font-size:5px;font-weight:700;color:#000;letter-spacing:1.5px;text-transform:uppercase;white-space:nowrap;">FREE SHIPPING ✦ NEW ARRIVALS ✦ EXCLUSIVE DEALS ✦ PREMIUM QUALITY ✦ FREE SHIPPING ✦ NEW ARRIVALS ✦</div></div>
                 <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:6px;padding:10px 14px;">
                   <div style="background:#111;border:1px solid rgba(212,175,55,0.15);border-radius:6px;overflow:hidden;">
-                    <div style="height:44px;background:linear-gradient(145deg,#1a1a1a,#222);display:flex;align-items:center;justify-content:center;font-size:18px;">⌚</div>
+                    <div style="height:44px;background:linear-gradient(145deg,#1a1a1a,#222);display:flex;align-items:center;justify-content:center;font-size:18px;">✔</div>
                     <div style="padding:5px;">
                       <div style="font-size:5px;color:#d4af37;text-transform:uppercase;letter-spacing:1px;">Electronics</div>
                       <div style="font-size:6px;color:#fff;font-weight:600;margin:2px 0;">Smart Watch</div>
@@ -1166,7 +1264,7 @@ footer{
                     </div>
                   </div>
                   <div style="background:#111;border:1px solid rgba(212,175,55,0.15);border-radius:6px;overflow:hidden;">
-                    <div style="height:44px;background:linear-gradient(145deg,#1a1a1a,#222);display:flex;align-items:center;justify-content:center;font-size:18px;">👕</div>
+                    <div style="height:44px;background:linear-gradient(145deg,#1a1a1a,#222);display:flex;align-items:center;justify-content:center;font-size:18px;">•</div>
                     <div style="padding:5px;">
                       <div style="font-size:5px;color:#d4af37;text-transform:uppercase;letter-spacing:1px;">Clothing</div>
                       <div style="font-size:6px;color:#fff;font-weight:600;margin:2px 0;">Graphic Tee</div>
@@ -1174,7 +1272,7 @@ footer{
                     </div>
                   </div>
                   <div style="background:#111;border:1px solid rgba(212,175,55,0.15);border-radius:6px;overflow:hidden;">
-                    <div style="height:44px;background:linear-gradient(145deg,#1a1a1a,#222);display:flex;align-items:center;justify-content:center;font-size:18px;">👜</div>
+                    <div style="height:44px;background:linear-gradient(145deg,#1a1a1a,#222);display:flex;align-items:center;justify-content:center;font-size:18px;">✦</div>
                     <div style="padding:5px;">
                       <div style="font-size:5px;color:#d4af37;text-transform:uppercase;letter-spacing:1px;">Accessories</div>
                       <div style="font-size:6px;color:#fff;font-weight:600;margin:2px 0;">Wallet</div>
@@ -1196,8 +1294,8 @@ footer{
 <section class="sec" id="testimonials">
   <div class="sec-in">
     <div class="ey rv">Client Words</div>
-    <h2 class="sec-h rv">Don't take my<br>word for it</h2>
-    <p class="sec-sub rv">Real feedback from real business owners who trusted me with their online presence.</p>
+    <h2 class="sec-h rv">Results speak<br>louder than pitches</h2>
+    <p class="sec-sub rv">Real feedback from business owners who trusted me with their online presence.</p>
     <div class="testi-g">
       <div class="testi-c rv d1">
         <div class="shine"></div>
@@ -1205,7 +1303,7 @@ footer{
         <p class="testi-q">Mayank delivered exactly what he promised. Our site started showing on Google within two weeks and we've had more appointment requests this month than the past three months combined.</p>
         <div class="testi-auth">
           <div class="testi-av">PM</div>
-          <div><div class="testi-nm">Priya Mehta</div><div class="testi-biz">Owner, Zenith Dental Care · Rewa</div></div>
+          <div><div class="testi-nm">Priya M.</div><div class="testi-biz">Dental Clinic Owner · Rewa, MP</div></div>
         </div>
       </div>
       <div class="testi-c rv d2">
@@ -1214,7 +1312,7 @@ footer{
         <p class="testi-q">I was skeptical about AI-built websites but the result genuinely surprised me. The launch email sequence made back 10× what I paid in the first week. Mayank thinks like a marketer, not just a developer.</p>
         <div class="testi-auth">
           <div class="testi-av" style="background:linear-gradient(135deg,#FF6B00,#FF0066)">RS</div>
-          <div><div class="testi-nm">Riya Sharma</div><div class="testi-biz">Founder, FlowFit Coaching · Mumbai</div></div>
+          <div><div class="testi-nm">Riya S.</div><div class="testi-biz">Fitness Coach · Mumbai</div></div>
         </div>
       </div>
       <div class="testi-c rv d3">
@@ -1223,7 +1321,7 @@ footer{
         <p class="testi-q">We've been selling jewellery for 20 years but had zero online presence. Mayank had our site live in 3 days. The product descriptions he wrote actually make our pieces sound as beautiful as they are.</p>
         <div class="testi-auth">
           <div class="testi-av" style="background:linear-gradient(135deg,#C49A1A,#DDB82A)">AG</div>
-          <div><div class="testi-nm">Anil Gupta</div><div class="testi-biz">Owner, Nakshatra Jewels · Jaipur</div></div>
+          <div><div class="testi-nm">Anil G.</div><div class="testi-biz">Jewellery Business Owner · Jaipur</div></div>
         </div>
       </div>
     </div>
@@ -1338,6 +1436,7 @@ footer{
           <div class="field-label">Connect directly</div>
           <h3 class="contact-panel-title">Fast replies. Focused scope.</h3>
         </div>
+        <p class="contact-panel-copy">Share one brief and get a clear review, scope outline and next-step recommendation within hours.</p>
         <div class="contact-summary">
           <div class="contact-meta">
             <div class="field-label">Response Time</div>
@@ -1349,34 +1448,53 @@ footer{
           </div>
           <div class="contact-meta">
             <div class="field-label">Location</div>
-            <div class="field-value">Rewa, MP · Available Worldwide</div>
+            <div class="field-value">Rewa, MP · Available worldwide</div>
           </div>
+        </div>
+        <div class="panel-list">
+          <div class="panel-item"><strong>01</strong> We review your brief and match it to the right service.</div>
+          <div class="panel-item"><strong>02</strong> You get a simple scope, timeline and next-step proposal.</div>
+          <div class="panel-item"><strong>03</strong> We align on delivery, budget and launch readiness.</div>
         </div>
         <div class="contact-links">
           <a href="https://instagram.com/mayankraoo" target="_blank" class="cl">📸 Instagram</a>
           <a href="https://wa.me/917999132103" target="_blank" class="cl">💬 WhatsApp</a>
-          <a href="https://www.linkedin.com/in/mayank-rao-1b361919b?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" class="cl">💼 LinkedIn</a>
+          <a href="https://www.linkedin.com/in/mayank-rao-1b361919b?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" class="cl">🔗 LinkedIn</a>
         </div>
       </aside>
-      <form action="https://formspree.io/f/xwvdbbjg" method="POST" id="contactForm" class="contact-form">
+      <form action="https://formspree.io/f/xwvdbbjg" method="POST" id="contactForm" class="contact-form" novalidate>
         <div class="form-row">
           <div class="form-field">
-            <label class="field-label">Name *</label>
-            <input class="field-control" type="text" name="name" required placeholder="Your name" />
+            <label class="field-label" for="name">Name *</label>
+            <input id="name" class="field-control" type="text" name="name" autocomplete="name" required placeholder="Your name" />
           </div>
           <div class="form-field">
-            <label class="field-label">Email *</label>
-            <input class="field-control" type="email" name="email" required placeholder="your@email.com" />
+            <label class="field-label" for="email">Email *</label>
+            <input id="email" class="field-control" type="email" name="email" autocomplete="email" required placeholder="your@email.com" />
           </div>
         </div>
         <div class="form-row">
           <div class="form-field">
-            <label class="field-label">Business Name</label>
-            <input class="field-control" type="text" name="business" placeholder="Company / Brand" />
+            <label class="field-label" for="business">Business / Brand</label>
+            <input id="business" class="field-control" type="text" name="business" autocomplete="organization" placeholder="Company or product name" />
           </div>
           <div class="form-field">
-            <label class="field-label">Budget</label>
-            <select class="field-control" name="budget">
+            <label class="field-label" for="service">Service needed</label>
+            <select id="service" class="field-control" name="service">
+              <option value="">Select service</option>
+              <option>AI Website Build</option>
+              <option>E-Commerce Store</option>
+              <option>Personal Brand Site</option>
+              <option>Conversion Copywriting</option>
+              <option>Full Brand Package</option>
+              <option>Something else</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-field">
+            <label class="field-label" for="budget">Budget</label>
+            <select id="budget" class="field-control" name="budget">
               <option value="">Select range</option>
               <option>₹12,000 – ₹25,000</option>
               <option>₹25,000 – ₹50,000</option>
@@ -1384,33 +1502,35 @@ footer{
               <option>Let's discuss</option>
             </select>
           </div>
+          <div class="form-field">
+            <label class="field-label" for="timeline">Preferred launch</label>
+            <select id="timeline" class="field-control" name="timeline">
+              <option value="">Choose timeline</option>
+              <option>Within 2 weeks</option>
+              <option>1 month</option>
+              <option>2–3 months</option>
+              <option>Flexible</option>
+            </select>
+          </div>
         </div>
         <div class="form-field full-width">
-          <label class="field-label">Service Needed</label>
-          <select class="field-control" name="service">
-            <option value="">Select service</option>
-            <option>AI Website Build</option>
-            <option>E-Commerce Store</option>
-            <option>Personal Brand Site</option>
-            <option>Conversion Copywriting</option>
-            <option>Full Brand Package</option>
-            <option>Something else</option>
-          </select>
+          <label class="field-label" for="message">Project brief *</label>
+          <textarea id="message" class="field-control" name="message" autocomplete="off" required rows="5" placeholder="What do you need? Who is the audience? What are the goals and deadline?" aria-describedby="messageHelp"></textarea>
+          <div class="form-helper" id="messageHelp">Start with the outcome you want, the audience, and any launch window or critical milestone.</div>
         </div>
-        <div class="form-field full-width">
-          <label class="field-label">Tell me about your project *</label>
-          <textarea class="field-control" name="message" required rows="4" placeholder="What do you need? Who's it for? Any deadline?"></textarea>
-        </div>
-        <button type="submit" class="contact-submit">
-          Send Message →
+        <button type="submit" id="submitBtn" class="contact-submit">
+          Start project review →
         </button>
-        <div id="formSuccess" class="form-success">
-          ✓ Message sent! I'll respond within a few hours.
-        </div>
+        <div id="formStatus" class="form-status" role="status" aria-live="polite" aria-hidden="true"></div>
       </form>
     </div>
   </div>
 </section>
+
+<!-- FLOATING WHATSAPP -->
+<a href="https://wa.me/917999132103" target="_blank" class="wa-float" aria-label="Chat on WhatsApp">
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
 
 <!-- FOOTER -->
 <footer>
@@ -1501,23 +1621,42 @@ document.querySelectorAll('a[href^="#"]').forEach(a=>{
 // FORMSPREE AJAX SUBMIT
 const form=document.getElementById('contactForm');
 if(form){
+  const btn=document.getElementById('submitBtn');
+  const status=document.getElementById('formStatus');
+  const setStatus=(message,type)=>{
+    status.textContent=message;
+    status.className=`form-status visible ${type}`;
+    status.setAttribute('aria-hidden','false');
+  };
+  const clearStatus=()=>{
+    status.className='form-status';
+    status.setAttribute('aria-hidden','true');
+    status.textContent='';
+  };
   form.addEventListener('submit',async e=>{
     e.preventDefault();
-    const btn=form.querySelector('button[type="submit"]');
-    const success=document.getElementById('formSuccess');
-    btn.textContent='Sending...';btn.style.opacity='.7';
+    clearStatus();
+    btn.disabled=true;
+    btn.setAttribute('aria-busy','true');
+    const originalText=btn.textContent;
+    btn.textContent='Sending...';
     try{
       const res=await fetch(form.action,{method:'POST',body:new FormData(form),headers:{Accept:'application/json'}});
       if(res.ok){
         form.reset();
-        success.style.display='block';
+        setStatus('Message sent — I’ll reply within a few hours with scoped next steps.', 'success');
         btn.textContent='Sent ✓';
-        btn.style.background='var(--gold-l)';
+        setTimeout(()=>btn.textContent=originalText,2500);
       } else {
-        btn.textContent='Failed — try again';btn.style.opacity='1';
+        setStatus('Submission failed. Please try again or reach out directly.', 'error');
+        btn.textContent='Send again';
       }
     } catch{
-      btn.textContent='Error — try again';btn.style.opacity='1';
+      setStatus('Network error. Please try again in a moment.', 'error');
+      btn.textContent='Send again';
+    } finally {
+      btn.disabled=false;
+      btn.removeAttribute('aria-busy');
     }
   });
 }
